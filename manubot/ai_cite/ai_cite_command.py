@@ -10,7 +10,7 @@ def cli_process(args):
         from manubot_ai_cite.editor import ManuscriptEditor
     except ImportError as err:
         raise ModuleNotFoundError(
-            "Install manubot with: pip install manubot[ai-rev]"
+            "Install manubot with: pip install manubot[ai-cite]"
         ) from err
 
     # set paths for content
