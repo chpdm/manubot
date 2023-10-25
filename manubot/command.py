@@ -31,6 +31,7 @@ def parse_arguments():
     add_subparser_cite(subparsers)
     add_subparser_webpage(subparsers)
     add_subparser_airevision(subparsers)
+    add_subparser_aicite(subparsers)
     for subparser in subparsers.choices.values():
         subparser.add_argument(
             "--log-level",
@@ -268,7 +269,7 @@ def add_subparser_aicite(subparsers):
         required=False,
         default="GPT3CompletionModel",
         help="Model type used to revise the manuscript. Default is GPT3CompletionModel. "
-        "It can be any subclass of manubot_ai_editor.models.ManuscriptRevisionModel",
+        "It can be any subclass of manubot_ai_cite.models.ManuscriptRevisionModel",
     )
     parser.add_argument(
         "--model-kwargs",
