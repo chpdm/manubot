@@ -45,7 +45,7 @@ def cli_process(args):
         )
 
     # revise
-    me.revise_manuscript(tmp_dir, model, debug=True)
+    me.suggest_manuscript(tmp_dir, model, debug=True)
 
     # copy the revised manuscript back to the content folder
     for f in tmp_dir.glob("*"):
